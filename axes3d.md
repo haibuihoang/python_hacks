@@ -1,6 +1,6 @@
 # Zorder issues when using axes3d
 
-Edit file: axes3d.py
+Edit file: anaconda3/lib/python3.8/site-packages/mpl_toolkits/mplot3d/axes3d.py
 
 ```
  287         force_zorder=False
@@ -39,7 +39,7 @@ import numpy as np
 
 fig = plt.figure()
 ax = a3.Axes3D(fig)
-ax.force_zorder=True
+ax.force_zorder=True  #Need this to force the zorder!
 # create an orizontal plane
 corners = [[0,0,0],[0,5,0],[5,5,0],[5,0,0]]
 tri = a3.art3d.Poly3DCollection([corners], alpha=0.9,zorder=-100)
